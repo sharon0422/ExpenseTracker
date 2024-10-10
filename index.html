@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+<body>
+    <h1> Expense Tracker</h1>
+    <p>Manage your Finances with Ease.</p>
+    <hr>
+    <form>
+         <label for="Income">Total Income:</label>
+         <input type="number" id="Income" value="number">
+    </form>
+    <br>
+    <h2>Expense List</h2>
+    <div class="input-section">
+        <label for="category-select">Category:</label>
+        <select id="category-select">
+           <option value="Food">&#xf0f5; Food</option>
+           <option value="Transportation">&#xf207;Transportation</option>
+           <option value="Rent">&#xf015;Rent</option>
+           <option value="Entertainment" >&#xf06c; Entertainment</option>
+           <option value="Others" >&#xf067;Others</option>
+        </select>
+        <label for="amount-input">Amount:</label>
+        <input type="number" id="amount-input">
+        <label for="date-input">Date:</label>
+        <input type="date" id="date-input">
+        <button id="add-btn">Add</button>
+        
+    </div>
+    <div class="expenses-list">
+          
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="expense-table-body">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total Expenses:</td>
+                        <td id="total-amount"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Savings:</td>
+                        <td id="savings-amount"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="chart-container" style="position: relative; height:40vh; width:40vw">
+            <canvas id="expenseChart"></canvas>
+        </div>
+
+        <script src="script.js"></script>
+       
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+
+</body>
+</html>
