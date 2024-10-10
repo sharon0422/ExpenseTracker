@@ -58,6 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 }]
             },
             options: {
+                responsive: true,  // Ensure the chart resizes with the window
+            maintainAspectRatio: false,
                 plugins: {
                     datalabels: {
                         color: '#fff',
@@ -140,3 +142,4 @@ document.addEventListener("DOMContentLoaded", () => {
         addExpense();
     });
 });
+
